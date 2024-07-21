@@ -1,7 +1,7 @@
 on:
   # cronjob trigger
   schedule:
-    - cron: '0 0 1 * *'
+    - cron: "0 0 1 * *"
   # manual trigger
   workflow_dispatch:
 jobs:
@@ -24,7 +24,7 @@ jobs:
       - name: actions-template-sync
         uses: AndreasAugustin/actions-template-sync@v2
         with:
-          # github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           source_repo_path: yorkblansh/devcontainer-template
           upstream_branch: master # defaults to main
         #   pr_labels: <label1>,<label2>[,...] # optional, no default
